@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import {connect} from 'react-redux';
 import { _register } from '../stateManagement/actions/register';
+import { useDispatch } from 'react-redux'
+import { Constants } from '../stateManagement/constant';
 
 const RegisterPage = (props)=> {
 
@@ -12,7 +14,8 @@ const RegisterPage = (props)=> {
         password: ''
     })
 
-    const dispatch = useDispatch();
+
+
 
     const handleChange = (name , value) => {
         setState({
@@ -22,7 +25,9 @@ const RegisterPage = (props)=> {
     }
 
     const registerHandler = () => {
-        props.register(state)
+      
+        
+        props.register(state);
     }
 
     return (

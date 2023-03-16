@@ -2,12 +2,13 @@
 import { applyMiddleware, createStore } from 'redux'
 import  thunkMiddleWare from 'redux-thunk';
 import {createLogger} from 'redux-logger'
-import { registrationreducer } from './reducer/authReducer';
+import { registrationreducer, rootReducer } from './reducer/authReducer';
+import { Constants } from './constant';
 
 const reduxLogger = createLogger()
-
+ 
 const store = createStore(
-    registrationreducer,
+    rootReducer,
     applyMiddleware(
         thunkMiddleWare,
         reduxLogger
@@ -15,3 +16,5 @@ const store = createStore(
 )
 
 export default store
+
+

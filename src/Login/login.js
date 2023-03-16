@@ -1,6 +1,14 @@
+import { useEffect, useState } from 'react';
 import  {Link}  from 'react-router-dom'
+import {useSearchParams}  from 'react-router-dom';
 
 const LoginPage  = () => {
+
+    const [searchParams , setSearchParams]= useSearchParams();
+
+    for (const [key, value] of searchParams) {
+        console.log(key , value)
+        }
 
     return  (
         <div className="flex flex-col">
