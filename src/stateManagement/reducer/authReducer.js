@@ -61,6 +61,6 @@ export const loginReducer = (state = {} ,action) => {
 // we have two reducer ? we need to combined both reducer ??
 
 export const rootReducer = combineReducers({
-    regitration : registrationreducer,
-    login: loginReducer
+     registrationreducer,
+    loginReducer,
 })

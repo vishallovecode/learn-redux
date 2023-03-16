@@ -1,9 +1,8 @@
 
-import { applyMiddleware, createStore } from 'redux'
-import  thunkMiddleWare from 'redux-thunk';
-import {createLogger} from 'redux-logger'
-import { registrationreducer, rootReducer } from './reducer/authReducer';
-import { Constants } from './constant';
+import { applyMiddleware, createStore } from 'redux';
+import { createLogger } from 'redux-logger';
+import thunkMiddleWare from 'redux-thunk';
+import { rootReducer } from './reducer/authReducer';
 
 const reduxLogger = createLogger()
  

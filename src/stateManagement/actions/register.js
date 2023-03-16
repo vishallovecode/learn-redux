@@ -1,5 +1,7 @@
 import { Constants } from "../constant";
 
+import  { Link } from 'react-router-dom'
+
 export function _register (register) {
     return (dispatch) => {
         // dispatch({type: Constants.REGISTER_REQUEST , user: register });
@@ -41,10 +43,10 @@ export function requestLogin (user)   {
     return {type: Constants.LOGIN_REQUEST , user }
 }
 export function loginSuccess (user)   {
-    return {type: Constants.LOGIN_FAILED , user }
+    return {type: Constants.LOGIN_SUCCESS , user }
 }
 export function loginFailed (user)   {
-    return {type: Constants.LOGIN_SUCCESS , user }
+    return {type: Constants.LOGIN_FAILED , user }
 }
 
 
